@@ -14,7 +14,7 @@ from airflow.operators.python import get_current_context
 sns.set()
 
 default_args = {
-    'owner': 'a.burlakov-9',
+    'owner': 'a.burlakov-10',
     'depends_on_past': False,
     'retries': 2,
     'retry_delay': timedelta(minutes=5),
@@ -29,9 +29,9 @@ def my_report(chat=None):
     my_token = '6023168328:AAE1WuD5RUDLNDyOgGdJkPBmKXXXXXXXXXXX'
     my_bot = telegram.Bot(token=my_token)
     
-    connection = {'host': 'https://clickhouse.lab.karpov.courses',
-                  'database':'simulator_20230120',
-                  'user':'student',
+    connection = {'host': 'https://clickhouse.XXXXXXXXXXXXXXXXX',
+                  'database':'XXXXXXXXXXXXXXXXXXX',
+                  'user':'XXXXXXXX',
                   'password':'XXXXXXXXXXXXX'}
 
     query_1 = """
